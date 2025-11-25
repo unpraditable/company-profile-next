@@ -1,29 +1,6 @@
 const HeroSection = () => {
   return (
     <div className="bg-gray-900">
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav
-          aria-label="Global"
-          className="flex px-4 py-6 lg:px-8 justify-center gap-6"
-        >
-          <a href="#about-section" className="text-md font-semibold text-white">
-            About
-          </a>
-          <a
-            href="#product-section"
-            className="text-md font-semibold text-white"
-          >
-            Product
-          </a>
-          <a
-            href="#location-section"
-            className="text-md font-semibold text-white"
-          >
-            Location
-          </a>
-        </nav>
-      </header>
-
       <section className="relative isolate px-4 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
