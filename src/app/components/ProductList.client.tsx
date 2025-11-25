@@ -24,8 +24,12 @@ const ProductListClient: React.FC<ProductListClientProps> = ({ products }) => {
             {product.image ? (
               <img
                 className="w-full h-50 object-cover"
-                src={product.image ?? "-"}
-                alt={product.name ?? `Product no. ${product.id}`}
+                src={product.image}
+                alt={
+                  product.name
+                    ? `This is an image of ${product.name} in a Product List`
+                    : `Product no. ${product.id}`
+                }
               />
             ) : (
               <div className="w-full h-50 bg-gray-200 flex items-center justify-center">

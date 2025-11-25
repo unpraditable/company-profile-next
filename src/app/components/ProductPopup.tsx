@@ -28,7 +28,9 @@ const ProductPopup = ({
                   className="w-full h-64 object-cover rounded mb-4 lg:h-96"
                   src={selectedProduct.image}
                   alt={
-                    selectedProduct.name || `Product No. ${selectedProduct.id}`
+                    selectedProduct.name
+                      ? `This is an image of ${selectedProduct.name} in a Popup`
+                      : `Product No. ${selectedProduct.id}`
                   }
                 />
               ) : (
