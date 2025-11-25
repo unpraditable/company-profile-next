@@ -1,20 +1,9 @@
 import { use } from "react";
-
-interface Product {
-  id: string;
-  name: string;
-}
-
-interface ImageData {
-  id: string[];
-  image: string;
-}
-
-interface CombinedProduct {
-  id: string;
-  name: string;
-  image: string | null;
-}
+import {
+  CompletedProduct,
+  Product,
+  ImageData,
+} from "../interfaces/ProductInterface";
 
 const Products = () => {
   async function getProductData() {
@@ -36,8 +25,6 @@ const Products = () => {
   const { data: productData } = use(getProductData());
   const { data: imageData } = use(getProductImageData());
 
-  console.log(productData, "dataaa");
-
   const imageMap = new Map<string, string>();
 
   imageData.forEach((imageGroup: ImageData) => {
@@ -46,9 +33,7 @@ const Products = () => {
     });
   });
 
-  console.log(imageMap, "mappp");
-
-  const combinedProducts: CombinedProduct[] = productData.map(
+  const completedProductData: CompletedProduct[] = productData.map(
     (product: Product) => ({
       ...product,
       image: imageMap.get(product.id) || null,
@@ -57,7 +42,7 @@ const Products = () => {
 
   return (
     <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-      {combinedProducts.map((product: CombinedProduct) => (
+      {completedProductData.map((product: CompletedProduct) => (
         <li
           className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
           key={product.id}
