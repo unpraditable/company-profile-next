@@ -28,7 +28,7 @@ const ProductListClient: React.FC<ProductListClientProps> = ({ products }) => {
                 alt={
                   product.name
                     ? `This is an image of ${product.name} in a Product List`
-                    : `Product no. ${product.id}`
+                    : `This is an image of Product id ${product.id} in a Product List`
                 }
               />
             ) : (
@@ -37,7 +37,7 @@ const ProductListClient: React.FC<ProductListClientProps> = ({ products }) => {
               </div>
             )}
             <p className="text-sm font-bold text-center py-4">
-              {product.name ?? "Unnamed Product"}
+              {`#${product.id} - ${product.name ?? "Unnamed Product"}`}
             </p>
           </li>
         ))}

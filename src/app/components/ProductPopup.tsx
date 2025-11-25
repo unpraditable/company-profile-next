@@ -30,7 +30,7 @@ const ProductPopup = ({
                   alt={
                     selectedProduct.name
                       ? `This is an image of ${selectedProduct.name} in a Popup`
-                      : `Product No. ${selectedProduct.id}`
+                      : `This is an image of Product Id ${selectedProduct.id} in a Popup`
                   }
                 />
               ) : (
@@ -41,7 +41,9 @@ const ProductPopup = ({
 
               <div className="space-y-2">
                 <h2 className="text-xl text-center font-bold">
-                  {selectedProduct.name || "Unnamed Product"}
+                  {`#${selectedProduct.id} - ${
+                    selectedProduct.name ?? "Unnamed Product"
+                  }`}
                 </h2>
               </div>
             </div>
