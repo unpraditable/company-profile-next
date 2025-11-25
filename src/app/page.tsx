@@ -4,6 +4,7 @@ import About from "./components/About";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Location from "./components/Location";
 
 export default function Home() {
   return (
@@ -26,6 +27,12 @@ export default function Home() {
           >
             <ProductList />
           </Suspense>
+        </section>
+        <section id="location-section" className="description container px-4">
+          <h2 className="text-center font-bold text-xl lg:text-2xl my-8">
+            Location
+          </h2>
+          <Location />
         </section>
       </main>
       <Footer />
