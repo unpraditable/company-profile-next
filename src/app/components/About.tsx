@@ -1,4 +1,4 @@
-const Description = () => {
+const About = () => {
   return (
     <section id="about-section" className="description container px-4">
       <h2 className="text-center font-bold text-xl my-4">What We Offer</h2>
@@ -56,4 +56,4 @@ const Description = () => {
   );
 };
 
-export default Description;
+export default About;

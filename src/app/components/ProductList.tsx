@@ -5,7 +5,7 @@ import {
   ImageData,
 } from "../interfaces/ProductInterface";
 
-const Products = () => {
+const ProductList = () => {
   async function getProductData() {
     const res = await fetch("https://www.giovankov.com/api/product.json");
     if (!res.ok) {
@@ -61,4 +61,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductList;

@@ -1,14 +1,14 @@
-import Products from "./components/Products";
 import { Suspense } from "react";
 import HeroSection from "./components/HeroSection";
-import Description from "./components/Description";
+import About from "./components/About";
+import ProductList from "./components/ProductList";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <main className="container justify-center mx-auto">
-        <Description />
+        <About />
         <section className="product-section">
           <h2 className="text-center font-bold text-2xl my-4">
             Available Products
@@ -16,7 +16,7 @@ export default function Home() {
           <Suspense
             fallback={<p className="text-center">Loading products...</p>}
           >
-            <Products />
+            <ProductList />
           </Suspense>
         </section>
       </main>
