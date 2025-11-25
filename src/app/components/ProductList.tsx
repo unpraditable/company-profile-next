@@ -4,6 +4,7 @@ import {
   Product,
   ImageData,
 } from "../interfaces/ProductInterface";
+import ProductListClient from "./ProductList.client";
 
 const ProductList = () => {
   async function getProductData() {
@@ -33,32 +34,14 @@ const ProductList = () => {
     });
   });
 
-  const completedProductData: CompletedProduct[] = productData.map(
+  const completedProductList: CompletedProduct[] = productData.map(
     (product: Product) => ({
       ...product,
       image: imageMap.get(product.id) || null,
     })
   );
 
-  return (
-    <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-      {completedProductData.map((product: CompletedProduct) => (
-        <li
-          className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
-          key={product.id}
-        >
-          <img
-            className="w-full h-50 object-cover "
-            src={product.image ?? "-"}
-            alt={product.name}
-          />
-          <p className="font-bold text-center py-4">
-            {product.name ?? "No Product Name Available"}
-          </p>
-        </li>
-      ))}
-    </ul>
-  );
+  return <ProductListClient products={completedProductList} />;
 };
 
 export default ProductList;
