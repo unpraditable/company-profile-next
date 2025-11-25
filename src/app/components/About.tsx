@@ -3,7 +3,7 @@ const About = () => {
     <>
       <ul>
         <li className="my-4 lg:flex lg:items-center lg:gap-6">
-          <p className="text-sm mb-4 lg:w-2/3 lg:text-md">
+          <article className="text-sm mb-4 lg:w-2/3 lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -11,7 +11,7 @@ const About = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          </article>
           <img
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             alt="The Picture of Service 1"
@@ -19,7 +19,7 @@ const About = () => {
           />
         </li>
         <li className="my-4 lg:flex lg:flex-row-reverse lg:items-center lg:gap-6">
-          <p className="text-sm mb-4 lg:w-2/3 lg:text-md">
+          <article className="text-sm mb-4 lg:w-2/3 lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -27,7 +27,7 @@ const About = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          </article>
           <img
             src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             alt="The Picture of Service 2"
@@ -35,7 +35,7 @@ const About = () => {
           />
         </li>
         <li className="my-4 lg:flex lg:items-center lg:gap-6">
-          <p className="text-sm mb-4 lg:w-2/3 lg:text-md">
+          <article className="text-sm mb-4 lg:w-2/3 lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -43,7 +43,7 @@ const About = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          </article>
           <img
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             alt="The Picture of Service 3"

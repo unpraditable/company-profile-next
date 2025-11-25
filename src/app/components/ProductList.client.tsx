@@ -24,7 +24,7 @@ const ProductListClient: React.FC<ProductListClientProps> = ({ products }) => {
             <img
               className="w-full h-50 object-cover "
               src={product.image ?? "-"}
-              alt={product.name ?? `Product ke-${product.id}`}
+              alt={product.name ?? `Product no. ${product.id}`}
             />
             <p className="text-sm font-bold text-center py-4">
               {product.name ?? "Unnamed Product"}
