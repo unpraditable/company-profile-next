@@ -49,3 +49,6 @@ The products and images are rendered using server components, so the SEO score w
 
 Here is the deployed website of this site:
 https://company-profile-next-dad1.vercel.app
+
+## Lighthouse Score
+<img width="717" height="272" alt="Screenshot 2025-11-26 at 02 30 02" src="https://github.com/user-attachments/assets/d5b57414-0e51-4104-876f-306e0cea11d1" />
