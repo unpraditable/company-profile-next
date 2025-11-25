@@ -8,8 +8,11 @@ export default function Home() {
     <>
       <HeroSection />
       <main className="container justify-center mx-auto">
-        <About />
-        <section className="product-section">
+        <section id="about-section" className="description container px-4">
+          <h2 className="text-center font-bold text-xl my-4">What We Offer</h2>
+          <About />
+        </section>
+        <section className="product-section container px-4">
           <h2 className="text-center font-bold text-2xl my-4">
             Available Products
           </h2>

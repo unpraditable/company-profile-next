@@ -4,7 +4,7 @@ const HeroSection = () => {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
-          className="flex p-6 lg:px-8 justify-center gap-6"
+          className="flex px-4 py-6 lg:px-8 justify-center gap-6"
         >
           <a href="#about-section" className="text-md font-semibold text-white">
             About
@@ -24,7 +24,7 @@ const HeroSection = () => {
         </nav>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <section className="relative isolate px-4 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-3xl font-semibold text-white sm:text-5xl">
@@ -36,7 +36,7 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

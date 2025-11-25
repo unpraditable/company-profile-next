@@ -1,9 +1,8 @@
 const About = () => {
   return (
-    <section id="about-section" className="description container px-4">
-      <h2 className="text-center font-bold text-xl my-4">What We Offer</h2>
+    <>
       <ul>
-        <li className="lg:flex lg:items-center lg:gap-6">
+        <li className="my-4 lg:flex lg:items-center lg:gap-6">
           <p className="text-sm mb-4 lg:w-2/3 lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -19,7 +18,7 @@ const About = () => {
             className="w-full max-h-[200px] object-contain rounded lg:w-1/3 lg:object-cover"
           />
         </li>
-        <li className="lg:flex lg:flex-row-reverse lg:items-center lg:gap-6">
+        <li className="my-4 lg:flex lg:flex-row-reverse lg:items-center lg:gap-6">
           <p className="text-sm mb-4 lg:w-2/3 lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -35,7 +34,7 @@ const About = () => {
             className="w-full max-h-[200px] object-contain rounded lg:w-1/3 lg:object-cover"
           />
         </li>
-        <li className="lg:flex lg:items-center lg:gap-6">
+        <li className="my-4 lg:flex lg:items-center lg:gap-6">
           <p className="text-sm mb-4 lg:w-2/3 lg:text-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -52,7 +51,7 @@ const About = () => {
           />
         </li>
       </ul>
-    </section>
+    </>
   );
 };
 
