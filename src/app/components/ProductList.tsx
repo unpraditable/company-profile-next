@@ -42,7 +42,7 @@ const ProductList = () => {
 
   if (imageData && Array.isArray(imageData)) {
     imageData.forEach((imageGroup: ImageData) => {
-      if (imageGroup.id && Array.isArray(imageGroup.id)) {
+      if (imageGroup.id && imageGroup.id.length) {
         imageGroup.id.forEach((id: string) => {
           imageMap.set(id, imageGroup.image);
         });
@@ -51,7 +51,7 @@ const ProductList = () => {
   }
 
   const completedProductList: CompletedProduct[] =
-    productData && Array.isArray(productData)
+    productData && productData.length
       ? productData.map((product: Product) => ({
           ...product,
           image: imageMap.get(product.id) || null,
