@@ -14,38 +14,42 @@ const ProductListClient: React.FC<ProductListClientProps> = ({ products }) => {
 
   return (
     <>
-      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-        {products.map((product: CompletedProduct) => (
-          <li
-            className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 "
-            key={product.id}
-          >
-            <button
-              className="cursor-pointer w-full"
-              onClick={() => setSelectedProduct(product)}
+      {products && products.length ? (
+        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+          {products.map((product: CompletedProduct) => (
+            <li
+              className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 "
+              key={product.id}
             >
-              {product.image ? (
-                <img
-                  className="w-full h-50 object-cover"
-                  src={product.image}
-                  alt={
-                    product.name
-                      ? `This is an image of ${product.name} in a Product List`
-                      : `This is an image of Product id ${product.id} in a Product List`
-                  }
-                />
-              ) : (
-                <div className="w-full h-50 bg-gray-200 flex items-center justify-center">
-                  No Image Available
-                </div>
-              )}
-              <p className="text-sm font-bold text-center py-4">
-                {`#${product.id} - ${product.name ?? "Unnamed Product"}`}
-              </p>
-            </button>
-          </li>
-        ))}
-      </ul>
+              <button
+                className="cursor-pointer w-full"
+                onClick={() => setSelectedProduct(product)}
+              >
+                {product.image ? (
+                  <img
+                    className="w-full h-50 object-cover"
+                    src={product.image}
+                    alt={
+                      product.name
+                        ? `This is an image of ${product.name} in a Product List`
+                        : `This is an image of Product id ${product.id} in a Product List`
+                    }
+                  />
+                ) : (
+                  <div className="w-full h-50 bg-gray-200 flex items-center justify-center">
+                    No Image Available
+                  </div>
+                )}
+                <p className="text-sm font-bold text-center py-4">
+                  {`#${product.id} - ${product.name ?? "Unnamed Product"}`}
+                </p>
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-center">No Product Available!</p>
+      )}
       {selectedProduct && (
         <ProductPopup
           selectedProduct={selectedProduct}

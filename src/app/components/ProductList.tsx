@@ -8,19 +8,31 @@ import ProductListClient from "./ProductList.client";
 
 const ProductList = () => {
   async function getProductData() {
-    const res = await fetch("https://www.giovankov.com/api/product.json");
-    if (!res.ok) {
-      throw new Error("Failed to fetch product data");
+    try {
+      const res = await fetch("https://www.giovankov.com/api/product.json");
+      if (!res.ok) {
+        console.error("Failed to fetch product data");
+        return { data: [] };
+      }
+      return res.json();
+    } catch (error) {
+      console.error("Error fetching product data:", error);
+      return { data: [] };
     }
-    return res.json();
   }
 
   async function getProductImageData() {
-    const res = await fetch("https://www.giovankov.com/api/image.json");
-    if (!res.ok) {
-      throw new Error("Failed to fetch image data");
+    try {
+      const res = await fetch("https://www.giovankov.com/api/image.json");
+      if (!res.ok) {
+        console.error("Failed to fetch image data");
+        return { data: [] };
+      }
+      return res.json();
+    } catch (error) {
+      console.error("Error fetching image data:", error);
+      return { data: [] };
     }
-    return res.json();
   }
 
   const { data: productData } = use(getProductData());
@@ -28,18 +40,23 @@ const ProductList = () => {
 
   const imageMap = new Map<string, string>();
 
-  imageData.forEach((imageGroup: ImageData) => {
-    imageGroup.id.forEach((id: string) => {
-      imageMap.set(id, imageGroup.image);
+  if (imageData && Array.isArray(imageData)) {
+    imageData.forEach((imageGroup: ImageData) => {
+      if (imageGroup.id && Array.isArray(imageGroup.id)) {
+        imageGroup.id.forEach((id: string) => {
+          imageMap.set(id, imageGroup.image);
+        });
+      }
     });
-  });
+  }
 
-  const completedProductList: CompletedProduct[] = productData.map(
-    (product: Product) => ({
-      ...product,
-      image: imageMap.get(product.id) || null,
-    })
-  );
+  const completedProductList: CompletedProduct[] =
+    productData && Array.isArray(productData)
+      ? productData.map((product: Product) => ({
+          ...product,
+          image: imageMap.get(product.id) || null,
+        }))
+      : [];
 
   return <ProductListClient products={completedProductList} />;
 };
